@@ -26,6 +26,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: var(--fzRegular);
     font-family: "Roboto", sans-serif;

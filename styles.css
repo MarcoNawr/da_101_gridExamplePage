@@ -20,8 +20,9 @@
     --clrCtaRegular: rgb(255, 255, 0);
     --clrCtaBorder: rgb(209, 136, 0);
     --clrCtaHover: rgb(255, 255, 129);
-    --clrBackgroundEven: rgb(231, 231, 231);
-    --clrBackgroundOdd: rgb(187, 162, 162);
+    --clrBackgroundOdd: white;
+    --clrBackgroundEven: rgb(253, 253, 253);
+
 
 }
 
@@ -39,12 +40,12 @@ h1 {
 h2 {
     font-size: var(--fzH2);
     padding-bottom: 1rem;
-
 }
 
 h3 {
     font-size: var(--fzH3);
     padding: 3rem 0;
+    text-align: center;
 }
 
 .outerMargin {
@@ -127,6 +128,55 @@ section {
     sectionPortfolio
  ==================================*/
 
+/* TODO: Wie gekomm ich das Grid auf eine Sinvolle Größe? aktuell setzten sich die Images durch */
+
+.imageGrid {
+    display: grid;
+    grid:
+        'pa1 pa2 pa3'
+        'pa4 pa4 pa3'
+        'pa5 pa6 pa7'
+        'pa8 pa9 pa9'
+    ;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+#p1 {
+    grid-area: pa4;
+}
+
+#p2 {
+    grid-area: pa1;
+}
+
+#p3 {
+    grid-area: pa7;
+}
+
+#p4 {
+    grid-area: pa2;
+}
+
+#p5 {
+    grid-area: pa3;
+}
+
+#p6 {
+    grid-area: pa5;
+}
+
+#p7 {
+    grid-area: pa6;
+}
+
+#p8 {
+    grid-area: pa8;
+}
+
+#p9 {
+    grid-area: pa9;
+}
 
 /* ==================================
     sectionContact

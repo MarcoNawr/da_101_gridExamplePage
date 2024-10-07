@@ -21,7 +21,7 @@
     --clrCtaBorder: rgb(209, 136, 0);
     --clrCtaHover: rgb(255, 255, 129);
     --clrBackgroundOdd: white;
-    --clrBackgroundEven: rgb(253, 253, 253);
+    --clrBackgroundEven: rgb(240, 240, 240);
 
 
 }
@@ -82,6 +82,21 @@ section {
 /* ================================================================================
     Main
  ================================================================================*/
+#conceptLink {
+    color: white;
+    position: absolute;
+    border: 3px dotted red;
+    top: 1rem;
+    left: 1rem;
+    padding: 10px;
+    background-color: rgb(255, 99, 71, 0.2);
+    z-index: 1;
+    text-decoration: none;
+}
+
+#conceptLink:hover {
+    background-color: rgb(255, 99, 71);
+}
 
 /* ==================================
     sectionHero
@@ -131,6 +146,7 @@ section {
 /* TODO: Wie gekomm ich das Grid auf eine Sinvolle Größe? aktuell setzten sich die Images durch */
 
 .imageGrid {
+    width: 100%;
     display: grid;
     grid:
         'pa1 pa2 pa3'
@@ -140,6 +156,13 @@ section {
     ;
     justify-items: stretch;
     align-items: stretch;
+    padding-bottom: 3rem;
+}
+
+.imageGrid>img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #p1 {
@@ -181,8 +204,35 @@ section {
 /* ==================================
     sectionContact
  ==================================*/
+#sectionContact {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+}
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+form>input,
+textarea {
+    width: 50%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(240, 240, 240);
+}
 
 /* ================================================================================
     Footer
  ================================================================================*/
+footer {
+    border-top: 1px solid black;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}

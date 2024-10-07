@@ -9,40 +9,70 @@
 
 :root {
     /*Font-Properties*/
-    --fzH1: 8rem;
-    --fzH2: 5rem;
-    --fzH3: 3rem;
+    --fzH1: 3.5rem;
+    --fzH2: 3rem;
+    --fzH3: 2rem;
+    --fzRegular: 1.5rem;
 
     /*Color-Properties*/
     --clrTextDark: black;
     --clrTextBright: white;
-    --clrCtaRegular: orange;
+    --clrCtaRegular: yellow;
     --clrCtaBorder: rgb(209, 136, 0);
-    --clrCtaHover: rgb(252, 181, 51);
-    --clrBackgroundEven: white;
-    --clrBackgroundOdd: rgb(231, 231, 231);
+    --clrCtaHover: rgb(255, 255, 111);
+    --clrBackgroundEven: rgb(231, 231, 231);
+    --clrBackgroundOdd: rgb(187, 162, 162);
 
 }
 
 body {
     /* TODO: FONT */
+    font-size: var(--fzRegular);
 }
 
 h1 {
     font-size: var(--fzH1);
+    padding: 3rem 0;
+    min-width: 820px;
 }
 
 h2 {
     font-size: var(--fzH2);
+    padding-bottom: 1rem;
+
 }
 
 h3 {
     font-size: var(--fzH3);
+    padding: 3rem 0;
 }
 
 .outerMargin {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.odd {
+    background-color: var(--clrBackgroundOdd);
+}
+
+.even {
+    background-color: var(--clrBackgroundEven);
+}
+
+.linkCTA {
+    padding: 1rem 2rem;
+    background-color: var(--clrCtaRegular);
+    border: 1px solid var(--clrCtaBorder);
+    border-radius: 0.5rem;
+}
+
+.linkCTA:hover {
+    background-color: var(--clrCtaHover);
+}
+
+section {
+    min-width: 1000px;
 }
 
 /* ================================================================================
@@ -52,7 +82,37 @@ h3 {
 /* ==================================
     sectionHero
  ==================================*/
+#sectionHero {
+    display: flex;
+    flex-direction: column;
+}
 
+.basicIntroduction {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detailedIntroduction {
+    display: flex;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    min-width: 970px;
+}
+
+.detailedIntroduction__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.detailedIntroduction__text>p {
+    max-width: 60ch;
+}
+
+.detailedIntroduction__text>a {
+    align-self: center;
+    justify-self: end;
+}
 
 /* ==================================
     sectionPortfolio

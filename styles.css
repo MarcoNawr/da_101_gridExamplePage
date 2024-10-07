@@ -1,7 +1,49 @@
 /* ================================================================================
     Global
  ================================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+    /*Font-Properties*/
+    --fzH1: 8rem;
+    --fzH2: 5rem;
+    --fzH3: 3rem;
+
+    /*Color-Properties*/
+    --clrTextDark: black;
+    --clrTextBright: white;
+    --clrCtaRegular: orange;
+    --clrCtaBorder: rgb(209, 136, 0);
+    --clrCtaHover: rgb(252, 181, 51);
+    --clrBackgroundEven: white;
+    --clrBackgroundOdd: rgb(231, 231, 231);
+
+}
+
+body {
+    /* TODO: FONT */
+}
+
+h1 {
+    font-size: var(--fzH1);
+}
+
+h2 {
+    font-size: var(--fzH2);
+}
+
+h3 {
+    font-size: var(--fzH3);
+}
+
+.outerMargin {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
 
 /* ================================================================================
     Main
